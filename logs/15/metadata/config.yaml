@@ -1,0 +1,12 @@
+flows:
+  num_steps: 100
+networks:
+  batch_size: 1024
+  epochs: 1000
+  hidden_dim: 100
+  lr: 0.0001
+num_samples: 5000
+plots:
+  n_traj: 200
+seed: 0
+task_name: bimodal_gaussian

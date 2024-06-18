@@ -1,0 +1,20 @@
+data_0:
+  name: eight_gaussian
+  params:
+    noise: 0.05
+data_1:
+  name: two_moons
+  params:
+    noise: 0.05
+flows:
+  k: 1
+  num_steps: 200
+networks:
+  batch_size: 256
+  epochs: 20000
+  hidden_dim: 64
+  lr: 0.05
+num_samples: 5000
+plots:
+  n_traj: 100
+seed: 0

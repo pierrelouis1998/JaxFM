@@ -1,0 +1,18 @@
+current_file_path: /home/pruhlman/Doctorat/python_project/flow_matching/main.py
+end_date: 18/06/2024
+end_time: '16:21:20'
+executable: /home/pruhlman/miniconda3/envs/jaxenv/bin/python
+hostname: ptb-07006641.grenoble.inria.fr
+logger:
+  artifacts_dir: /home/pruhlman/Doctorat/python_project/flow_matching/logs/90/artifacts
+  log_dir: /home/pruhlman/Doctorat/python_project/flow_matching/logs/90
+  log_id: 90
+  metadata_dir: /home/pruhlman/Doctorat/python_project/flow_matching/logs/90/metadata
+  metrics_dir: /home/pruhlman/Doctorat/python_project/flow_matching/logs/90/metrics
+process_id: 25511
+scheduler: null
+start_date: 18/06/2024
+start_time: '16:19:26'
+status: COMPLETE
+version_manager: null
+work_dir: /home/pruhlman/Doctorat/python_project/flow_matching
