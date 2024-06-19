@@ -1,5 +1,5 @@
 # JAXFM : A Python package for Flow Matching using JAX
-![](logo.png)
+![](logo.png)![](logo2.png)
 ## Description
 A Python package implementing flow matching methods using jax. The code includes 
 - `reflows.py` : Implementation of [1] 
