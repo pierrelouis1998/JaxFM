@@ -1,6 +1,9 @@
 # JAXFM : A Python package for Flow Matching using JAX
+<p align="center">
+  <img src="logo.png" />
+  <img src="logo2.png" />
+</p>
 
-<img align="left" width="300" height="300" src="logo.png"> <img align="right" width="300" height="300" src="logo2.png">
 
 ## Description
 A Python package implementing flow matching methods using jax. The code includes 
