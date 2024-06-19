@@ -5,6 +5,7 @@ jaxfm/__init__.py
 jaxfm.egg-info/PKG-INFO
 jaxfm.egg-info/SOURCES.txt
 jaxfm.egg-info/dependency_links.txt
+jaxfm.egg-info/requires.txt
 jaxfm.egg-info/top_level.txt
 jaxfm/flows/__init__.py
 jaxfm/flows/base.py

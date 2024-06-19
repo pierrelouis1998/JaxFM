@@ -1,0 +1,6 @@
+jax
+numpy
+tqdm
+equinox
+jaxtyping
+matplotlib

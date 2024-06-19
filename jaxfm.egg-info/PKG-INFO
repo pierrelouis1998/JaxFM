@@ -11,6 +11,12 @@ Classifier: Operating System :: OS Independent
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: LICENSE
+Requires-Dist: jax
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: equinox
+Requires-Dist: jaxtyping
+Requires-Dist: matplotlib
 
 # JAXFM : A Python package for Flow Matching using JAX
 <p align="center">
