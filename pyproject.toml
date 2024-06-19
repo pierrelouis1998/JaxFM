@@ -1,3 +1,29 @@
+[project]
+name = "jaxfm"
+version = "0.1.0"
+authors = [{name="Pierre-Louis Ruhlmann", email="pierre-louis.ruhlmann@inria.fr"},]
+description = "JAX-based implementation of Flow Matching"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "jax",
+  "numpy",
+  "tqdm",
+  "equinox",
+  "jaxtyping",
+  "matplotlib",
+]
+[project.urls]
+repository = "https://github.com/pierrelouis1998/JaxFM/tree/main"
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
 [tool.ruff.lint]
 ignore = [
   "F722",

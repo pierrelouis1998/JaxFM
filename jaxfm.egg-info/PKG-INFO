@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: jaxfm
+Version: 0.1.0
+Summary: JAX-based implementation of Flow Matching
+Author-email: Pierre-Louis Ruhlmann <pierre-louis.ruhlmann@inria.fr>
+Project-URL: repository, https://github.com/pierrelouis1998/JaxFM/tree/main
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# JAXFM : A Python package for Flow Matching using JAX
+<p align="center">
+  <img src="logo.png" />
+  <img src="logo2.png" />
+</p>
+
+
+## Description
+A Python package implementing flow matching methods using jax. The code includes 
+- `reflows.py` : Implementation of [1] 
+- `conditional.py`: Implementation of [2]
+Various test datasets are also available to test the above methods.
+
+## Refrences
+
+[1]: [(Liu et al.)](http://arxiv.org/abs/2209.03003) **Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow** 
+
+[2]: [(Lipman et al.)](http://arxiv.org/abs/2210.02747) **Flow Matching for Generative Modeling**
