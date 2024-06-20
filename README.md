@@ -2,7 +2,17 @@
 <p align="center">
   <img src="logo.png" />
   </p>
+## Installation
 
+You gan install the package via `pip`
+
+```
+pip install jaxfm
+```
+Package is in ealy phase so expect some bugs
+## Docs
+
+TODO
 
 ## Description
 A Python package implementing flow matching methods using jax. The code includes 
