@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: jaxfm
-Version: 0.1.0
+Version: 0.1.1
 Summary: JAX-based implementation of Flow Matching
 Author-email: Pierre-Louis Ruhlmann <pierre-louis.ruhlmann@inria.fr>
 Project-URL: repository, https://github.com/pierrelouis1998/JaxFM/tree/main
