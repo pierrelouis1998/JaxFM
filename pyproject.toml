@@ -1,6 +1,6 @@
 [project]
 name = "jaxfm"
-version = "0.1.2.a"
+version = "0.1.3"
 authors = [{name="Pierre-Louis Ruhlmann", email="pierre-louis.ruhlmann@inria.fr"},]
 description = "JAX-based implementation of Flow Matching"
 readme = "README.md"
