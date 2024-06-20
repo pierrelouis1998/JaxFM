@@ -2,6 +2,7 @@
 <p align="center">
   <img src="logo.png" />
   </p>
+  
 ## Installation
 
 You gan install the package via `pip`
