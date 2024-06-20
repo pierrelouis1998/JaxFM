@@ -1,7 +1,13 @@
+"""Training utilities for rectified flows."""
+
+from typing import List
+
 import equinox as eqx
 import jax
 import jax.numpy as jnp
 import matplotlib.pyplot as plt
+import optax
+from jaxtyping import Array, Float
 from tqdm import tqdm
 
 from jaxfm.flows.base import Flow
@@ -18,11 +24,29 @@ def get_loss_fn(name="l2"):
     return loss_fn
 
 
-def train_rectified_flow(
-    rectified_flow: Flow, optimizer, x0, x1, batch_size, inner_iters
-):
+def train_flow(
+    flow: Flow,
+    optimizer: optax.GradientTransformation,
+    x0: Float[Array, "batch_size dim"],
+    x1: Float[Array, "batch_size dim"],
+    batch_size: int,
+    inner_iters: int,
+) -> (Flow, List[float]):
+    """Train the flow with data points x0 and x1.
+
+    Args:
+        flow: Instance of the flow model.
+        optimizer: optimizer for training.
+        x0: Source points.
+        x1: Target points.
+        batch_size: Batch size for training.
+        inner_iters: Number of training iterations.
+
+    Returns:
+        Trained flow and loss curve.
+    """
     loss_curve = []
-    opt_state = optimizer.init(eqx.filter(rectified_flow.model, eqx.is_array))
+    opt_state = optimizer.init(eqx.filter(flow.model, eqx.is_array))
     key = jax.random.PRNGKey(0)
     loss_fn = get_loss_fn()
 
@@ -43,13 +67,13 @@ def train_rectified_flow(
         z0 = x0[idx]
         z1 = x1[idx]
 
-        z_t, t, target = rectified_flow.get_train_tuple(z0, z1, subkey)
+        z_t, t, target = flow.get_train_tuple(z0, z1, subkey)
         # print(z_t.shape, t.shape, target.shape)
-        rectified_flow.model, opt_state, loss = make_step(
-            rectified_flow.model, z_t, t, target, opt_state
+        flow.model, opt_state, loss = make_step(
+            flow.model, z_t, t, target, opt_state
         )
         if i == inner_iters - 1:
-            vt = jax.vmap(rectified_flow.model, in_axes=(0, 0))(z_t, t)
+            vt = jax.vmap(flow.model, in_axes=(0, 0))(z_t, t)
             fig = plt.figure(figsize=(8, 5))
             angle = jnp.arctan2(vt[:, 1], vt[:, 0])
             plt.quiver(z_t[:, 0], z_t[:, 1], jnp.cos(angle), jnp.sin(angle))
@@ -58,4 +82,4 @@ def train_rectified_flow(
         loss_curve.append(loss)
 
         trange.set_postfix(loss=loss)
-    return rectified_flow, loss_curve
+    return flow, loss_curve
