@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: jaxfm
-Version: 0.1.1
+Version: 0.1.2
 Summary: JAX-based implementation of Flow Matching
 Author-email: Pierre-Louis Ruhlmann <pierre-louis.ruhlmann@inria.fr>
 Project-URL: repository, https://github.com/pierrelouis1998/JaxFM/tree/main
@@ -17,6 +17,7 @@ Requires-Dist: tqdm
 Requires-Dist: equinox
 Requires-Dist: jaxtyping
 Requires-Dist: matplotlib
+Requires-Dist: optax
 
 # JAXFM : A Python package for Flow Matching using JAX
 <p align="center">
